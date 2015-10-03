@@ -2,12 +2,14 @@
 Ghost theme mint, free to use. Enjoy your blogging!
 ## Features
 
-*Mint* is a light theme for Ghost, with the green color makes people enjoy the reading and the writing. Dead simple theme but also integrated with some special functions, see them as follows: 
+Mint is a light theme for Ghost, with the green color makes people enjoy the reading and the writing. Dead simple theme but also integrated with some special functions, see them as follows: 
 - Ghost hunter search engine.
 - Automatic SEO friendly setting.
 - Mobile device friendly.
 - With Disqus comments integrated.
 - Prismjs code high lighting.
+
+Demo: https://www.railgun.cn/
 
 ## Avatar
 
