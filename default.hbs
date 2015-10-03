@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        {{! Document Settings }}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="handheldfriendly" content="true"/>
+        {{! Page Meta }}
+		{{#if post}}
+        <title>{{meta_title}} - {{@blog.title}}</title>
+	    {{else}}
+	    <title>{{meta_title}} - 一个科学的博客</title>
+	    {{/if}}
+		{{#if post}}
+		       <meta name="description" content="{{#post}}{{excerpt words="150"}}
+		    {{/post}}" />
+			   <meta name="keywords" content="{{meta_description}}"/>
+		    {{else}}
+		        <meta name="description" content="{{meta_description}}" />
+				<meta name="keywords" content="{{meta_title}} - 一个科学的博客,railgun,Sven" />
+		    {{/if}}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="stylesheet" href="{{asset "css/styles.css"}}">
+        {{ghost_head}}
+    </head>
+<body class="{{body_class}} nav-closed">
+<div class="nav">
+<h3 class="nav-title">Menu</h3>
+<a href="#" class="nav-close">
+<span class="hidden">Close</span>
+</a>
+<ul>
+<li class="nav-home nav-current" role="presentation"><a href="#/">Home</a></li>
+<li class="nav-about" role="presentation"><a href="https://www.railgun.cn/about">About</a></li>
+<li class="nav-contact" role="presentation"><a href="#">Contact</a></li>
+</ul>
+<a class="subscribe-button icon-rss" href="https://www.railgun.cn/rss">Subscribe</a>
+ 	  <form>
+        <input id="search-field" placeholder="Search something..." />
+		<button type="submit" alt="search" class="search-submit"><span class="icon-search"></span></button>
+      </form>
+	  <section id="results"> </section>
+</div>
+<span class="nav-cover"></span>
+
+    <div class="site-wrapper">
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header id="top" class="site-header">
+	<nav class="main-nav overlay clearfix">
+	<a class="menu-button" href="#"><span class="icon-menu"></span> <span class="word">Menu</span></a>
+	</nav>
+          <h2><a class="logo ir" href="{{@blog.url}}" title="{{@blog.title}}"><span class="bigR">R</span><span class="1">a</span><span class="2">i</span><span class="3">l</span><span class="4">g</span><span class="5">u</span><span class="6">n</span></a></h2>
+        </header>
+             {{{body}}}
+        <footer class="main-footer">
+          <div class="container clearfix">
+           
+              <a class="icon-rss" href="{{@blog.url}}/rss/" title="RSS Feed"></a>
+              <p>All content copyright <a href="{{@blog.url}}" title="{{@blog.title}}">{{@blog.title}}</a> &copy; 2015. All rights reserved.</p>
+              <p>Powered by Ghost. Theme Mint designed by <a href="http://www.seavia.com" target="_blank" rel="external" title="主题由SVEN设计">Sven</a>.</p>    
+          </div> 
+        </footer>
+
+        {{ghost_foot}}
+        <script src="{{asset "js/jquery-1.11.0.min.js"}}"></script>
+        <script src="{{asset "js/mint.js"}}"></script>
+	    <script>
+    
+	      var searchField = $("#search-field").ghostHunter({
+	                          results   : "#results",
+	                          zeroResultsInfo     : false,
+	                          //Enable the "search as you type" by uncommenting the following line
+	                          onKeyUp   : true
+	                        });
+    
+	      function clearResults() {
+	        searchField.clear();
+	      }
+    
+	    </script>
+	</div>
+</html>
