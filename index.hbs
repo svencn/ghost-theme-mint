@@ -1,0 +1,36 @@
+{{!< default}}
+        <div class="container clearfix">
+          <main role="main" id="content" class="content">
+              {{#foreach posts}}  
+              <article class="{{post_class}} post">
+				  
+                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+                <footer class="post-info">Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=", " prefix="Tagged in "}}</span></footer>
+                {{#if image}} <div class="featured-image"><a href="{{url}}" title="{{title}}"><div class="fimg" style="background:url({{image}}) no-repeat center center;-webkit-background-size: cover; -moz-background-size: cover;-o-background-size: cover;background-size: cover;-webkit-transition:all .54s;transition:all .54s"></div></a><p>{{excerpt characters="300"}}&hellip;</p></div>  
+				{{else}}
+                <p>{{excerpt characters="600"}}&hellip;</p>
+                {{/if}}
+                <a class="read-more" href="{{url}}" title="{{title}}">Read More</a>
+              </article>
+              {{/foreach}}
+
+              {{pagination}}
+          </main>
+
+          <aside id="scroll_box" class="author">	 
+            <div class="slide-box-scroll">
+			<div id="backtoTop" data-action="gototop"></div>
+           <img class="profile-image" src="{{asset "img/profile-image.jpg"}}" alt="railgun" /></a>
+            <p class="name">by <strong>Sven</strong></p>
+            <p class="address">Stuttgart, Germany</p>
+            <p class="link">目测中二病快要毕业了。</p>
+            <ul class="social">
+              <li><a class="icon-twitter" target="_blank" rel="nofollow" href="http://twitter.com/svencn" title="Follow me on Twitter"></a></li>
+              <li><a class="icon-dribbble"  target="_blank" rel="nofollow" href="https://dribbble.com/svencn" title="See what I'm working on Dribbble"></a></li>
+              <li><a class="icon-wordpress" target="_blank" href="http://www.seavia.com" hreflang="zh" title="Check out my Chinese blog."></a></li>
+            </ul>
+			<div class="percent">
+			You have read: <div class="per"></div><span></span>%</div>
+            </div>
+          </aside>
+        </div>
