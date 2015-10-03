@@ -1,5 +1,7 @@
 # Ghost-theme-mint
 Ghost theme mint, free to use. Enjoy your blogging!
+
+主题的中文文档请阅读：http://www.seavia.com/jianzhan/ghost-theme-mint-free-download.html
 ## Features
 
 Mint is a light theme for Ghost, with the green color makes people enjoy the reading and the writing. Dead simple theme but also integrated with some special functions, see them as follows: 
