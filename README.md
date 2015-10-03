@@ -27,5 +27,5 @@ Thanks to the great free open source from:
 - Ghost hunter search engine.
 - Icomoon font.
 - Prismjs code highlight.
-- 
+ 
 And last but not the least, mint theme is inspired from Raphael Riegel.
